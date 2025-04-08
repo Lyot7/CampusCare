@@ -1,0 +1,12 @@
+FROM postgres:latest
+
+# Variables d'environnement pour la base de données
+ENV POSTGRES_DB=campus_care
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=postgres
+
+# Exposer le port par défaut de PostgreSQL
+EXPOSE 5432
+
+# Les données seront persistées dans un volume Docker
+VOLUME ["/var/lib/postgresql/data"] 
